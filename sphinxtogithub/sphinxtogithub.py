@@ -34,7 +34,7 @@ class Replacer(object):
 
     def process(self, text):
 
-        return text.replace( self.from_, self.to )
+        return text.decode('ascii', 'ignore').replace( self.from_, self.to )
 
 class FileHandler(object):
     "Applies a series of replacements the contents of a file inplace"
